@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAVE</title>
+
+    <!-- Link to favicon -->
+    <link rel="icon" href="assets/wavewhite.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-left">
+            <a href="index.html">
+        <img src="assets/wavewhite.png" alt="Logo" class="navbar-logo">
+    </a>
+        </div>
+        <div class="navbar-right">
+            <button class="menu-button">MENU</button>
+        </div>
+    </nav>
+
+    <!-- Main div taking full viewport -->
+    <div class="main">
+        <!-- Content div inside main -->
+        <div id="content">
+            <video id="logoVideo" muted preload="auto" disablePictureInPicture controlsList="nodownload nofullscreen noremoteplayback">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <!-- White-bottom div that fills the screen below the main div -->
+    <div class="white-bottom"></div>
+
+    <div id="customCursor" class="custom-cursor"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

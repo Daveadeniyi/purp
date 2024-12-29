@@ -1,0 +1,139 @@
+/* Set the background color for the page */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: #30194c; /* Purple background */
+}
+
+/* Main div (wrapper for content) */
+.main {
+    width: 100vw; /* Full width of viewport */
+    height: 100vh; /* Full height of viewport */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #30194c; /* Purple background */
+}
+
+/* Style for the content (video container) */
+#content {
+    display: none; /* Initially hidden */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%; /* Content will fill the entire main div */
+}
+
+/* Style for the video */
+#logoVideo {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    transition: transform 1.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    clip-path: inset(2% 2% 2% 2%); /* Crops 2% from each edge */
+}
+
+/* Scale down class to shrink video to 80% */
+.scale-down {
+    transform: scale(0.8); /* Scale the video to 80% */
+}
+
+/* White-bottom div takes up full screen below main */
+.white-bottom {
+    width: 100vw;
+    height: 100vh; /* Full height of the viewport (user's screen) */
+    background-color: #f3f0fb;
+}
+
+/* Hide the default cursor */
+body {
+    cursor: none; /* Hide default cursor */
+}
+
+/* Custom cursor style */
+.custom-cursor {
+    position: fixed; /* Fixed position to follow mouse */
+    width: 15px; /* Width of the cursor */
+    height: 15px; /* Height of the cursor */
+    border-radius: 50%; /* Make it a circle */
+    background-color: #f3f0fb; /* Custom color */
+    pointer-events: none; /* Prevent interaction */
+    transform: translate(-50%, -50%); /* Center the cursor */
+    transition: background-color 0.3s; /* Optional transition for hover effects */
+}
+
+/* Hide the scrollbar in webkit-based browsers (Chrome, Safari) */
+body::-webkit-scrollbar {
+    width: 0;  /* Removes the scrollbar's width */
+    background: transparent;  /* Makes the scrollbar transparent */
+}
+
+/* For Firefox */
+body {
+    scrollbar-width: none; /* Disables the scrollbar in Firefox */
+}
+
+/* Hide the scrollbar while allowing scrolling in all browsers */
+html, body {
+    overflow: auto; /* Ensure the page remains scrollable */
+}
+
+/* Navbar styling */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;      /* Set top padding */
+    padding-right: 2vw;    /* Set right padding */
+    padding-bottom: 10px;   /* Set bottom padding */
+    padding-left: 2vw;     /* Set left padding */
+    background-color: rgba(0, 0, 0, 0); /* Transparent background */
+    z-index: 1000; /* Ensure it's above other elements */
+    box-sizing: border-box;
+    opacity: 0; /* Initially invisible */
+    transition: opacity 2s ease; /* 2 seconds for a smooth fade-in */
+}
+
+/* Navbar left section with logo */
+.navbar-left .navbar-logo {
+    height: 6vh;
+}
+
+/* Navbar right section with menu button */
+.navbar-right .menu-button {
+    background-color: #f3f0fb; /* Same color as the custom cursor */
+    color: #30194d; /* Purple text color */
+    border: none;
+    border-radius: 15px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.navbar-right .menu-button:hover {
+    background-color: #dcd7ef; /* Slightly darker on hover */
+}
+
+a {
+    cursor: none; /* Prevent system cursor from showing */
+}
+
+.menu-button {
+    cursor: none; /* Prevent system cursor from showing */
+}
+
+.menu-button:hover {
+    cursor: none; /* Prevent system cursor from showing */
+}
+
+.no-scroll {
+    overflow: hidden; /* Prevent scrolling */
+}
